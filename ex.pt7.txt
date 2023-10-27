@@ -1,0 +1,27 @@
+
+Vous avez envoyé
+Nomclients = []
+ClientsAmts = []
+
+for i in range(3):
+    ClientsNames.append(input(f"enter FULLNAME For client number [{i+1}]: "))
+    ArticlesNumber = int(input(f"enter number of ARTICLEs for client [{i+1}]: "))
+    
+    TotalArticlesAmount = 0
+    for j in range(ArticlesNumber):
+        HT = float(input(f"enter the price for article number[{j+1}]: "))
+        TotalArticlesAmount = TotalArticlesAmount + HT
+
+    TVA = TotalArticlesAmount * 15 / 100
+    TTC = TotalArticlesAmount + TVA 
+    AmountWithDiscount = TTC - TTC * 2/100
+
+    ClientsAmounts.append(AmountWithDiscount)
+    print("\n\n")
+
+
+print("_______________________________")
+print("        FACTURE")
+print("_______________________________")
+for i in range(3):
+    print("Total amount for client [ ",Nomclients[i],"] is : ",ClientsAmts[i])
